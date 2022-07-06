@@ -21,26 +21,20 @@
 
 		<form action="/Christy_Xavier_Spring_MVCLabSolution/student/save"
 			method="POST">
+			<input type="hidden" name="studentId" value="${Student.studentId}">
+
+
 			<div class="form-line">
-				<input type="text" name="studentId" value="${student.studentId}"
-					class="form-control mb-4 col-4" placeholder="StudentId">
+				<input type="text" name="name" value="${Student.name}"
+					class="form-control mb-4 col-4" placeholder="Name">
 			</div>
 
 			<div class="form-line">
-				<input type="text" name="firstName" value="${student.firstName}"
-					class="form-control mb-4 col-4" placeholder="FirstName">
-			</div>
-
-			<div class="form-line">
-				<input type="text" name="lastName" value="${student.lastName}"
-					class="form-control mb-4 col-4" placeholder="LastName">
-			</div>
-			<div class="form-line">
-				<input type="text" name="department" value="${student.department}"
+				<input type="text" name="department" value="${Student.department}"
 					class="form-control mb-4 col-4" placeholder="Department">
 			</div>
 			<div class="form-line">
-				<input type="text" name="country" value="${student.country}"
+				<input type="text" name="country" value="${Student.country}"
 					class="form-control mb-4 col-4" placeholder="Country">
 			</div>
 

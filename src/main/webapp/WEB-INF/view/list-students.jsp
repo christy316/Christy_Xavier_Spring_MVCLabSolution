@@ -30,8 +30,7 @@
 			<thead class="thead-dark">
 				<tr>
 					<th>Student ID</th>
-					<th>FirstName</th>
-					<th>LastName</th>
+					<th>Name</th>
 					<th>Department</th>
 					<th>Country</th>
 					<th>Action</th>
@@ -41,8 +40,7 @@
 				<c:forEach items="${Students}" var="tempStudent">
 					<tr>
 						<td><c:out value="${tempStudent.studentId}" /></td>
-						<td><c:out value="${tempStudent.firstName}" /></td>
-						<td><c:out value="${tempStudent.lastName}" /></td>
+						<td><c:out value="${tempStudent.name}" /></td>
 						<td><c:out value="${tempStudent.department}" /></td>
 						<td><c:out value="${tempStudent.country}" /></td>
 						<td><a
@@ -50,7 +48,7 @@
 							class="btn btn-info btn-sm">Update</a> <a
 							href="/Christy_Xavier_Spring_MVCLabSolution/student/delete?studentId=${tempStudent.studentId}"
 							class="btn btn-danger btn-sm"
-							onClick="if(!(confirm('Are you sure, you want to delete the studen record?'))) return false">Delete</a>
+							onClick="if(!(confirm('Are you sure you want to delete?'))) return false">Delete</a>
 						</td>
 
 					</tr>

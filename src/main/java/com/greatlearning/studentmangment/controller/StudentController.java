@@ -48,20 +48,19 @@ public class StudentController {
 	}
 
 	@PostMapping("/save")
-	public String saveBook(@RequestParam("studentId") int studentId, @RequestParam("firstName") String firstName,
-			@RequestParam("lastName") String lastName, @RequestParam("department") String department,
+	public String saveBook(@RequestParam("studentId") int studentId, @RequestParam("name") String name,
+			@RequestParam("department") String department,
 			@RequestParam("country") String country) {
 
 		Student student;
 		if (studentId != 0) {
 			student = studentService.findById(studentId);
-			student.setFirstName(firstName);
-			student.setLastName(lastName);
+			student.setName(name);
 			student.setDepartment(department);
 			student.setCountry(country);
 
 		} else {
-			student = new Student(firstName, lastName, department, country);
+			student = new Student(name, department, country);
 		}
 		studentService.save(student);
 
